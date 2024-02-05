@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Beat Maker</title>
 </head>
+
 <body>
-    
+
     <div class="sequencer">
         <div class="kick-track">
             <div class="controls">
@@ -16,9 +18,10 @@
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>
                 <select name="kick-select" id="kick-select">
-                    <option value="./Sounds/kick-classic.wav">Classic Kick</option>
-                    <option value="./Sounds/kick-808.wav">808 Kick</option>
-                    <option value="./Sounds/kick-heavy.wav">Kick Heavy</option>
+                    <option value="./sounds/kick-classic.wav">Classic Kick</option>
+                    <option value="./sounds/kick-808.wav">808 Kick</option>
+                    <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+                    <option value="./sounds/kick-softy.wav">Kick Softy</option>
                 </select>
             </div>
             <div class="kick">
@@ -40,9 +43,9 @@
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>
                 <select name="snare-select" id="snare-select">
-                    <option value="./Sounds/snare-acoustic01.wav">Classic Snare</option>
-                    <option value="./Sounds/snare-808.wav">808 Snare</option>
-                    <option value="./Sounds/snare-viny02.wav">Snare Vinyl</option>
+                    <option value="./sounds/snare-acoustic01.wav">Classic Snare</option>
+                    <option value="./sounds/snare-808.wav">808 Snare</option>
+                    <option value="./sounds/snare-viny02.wav">Snare Vinyl</option>
                 </select>
             </div>
             <div class="snare">
@@ -64,8 +67,8 @@
                     <i class="fa-solid fa-volume-xmark"></i>
                 </button>
                 <select name="snare-select" id="snare-select">
-                    <option value="./Sounds/hihat-acoustic01.wav">Classic Hihat</option>
-                    <option value="./Sounds/hihat-808.wav">808 Hihat</option>
+                    <option value="./sounds/hihat-acoustic01.wav">Classic Hihat</option>
+                    <option value="./sounds/hihat-808.wav">808 Hihat</option>
                 </select>
             </div>
             <div class="hihat">
@@ -80,16 +83,21 @@
             </div>
         </div>
         <button class="play">Play</button>
+        <div class="tempo">
+            <input type="range" class="tempo-slider" max="300" min="20" value="150">
+            <p> Tempo: <span class="tempo-nr">150</span></p>
+        </div>
     </div>
 
 
-    <audio src="./Sounds/kick-classic.wav"></audio>
-    <audio src="./Sounds/snare-acoustic01.wav"></audio>
-    <audio src="./Sounds/hihat-acoustic01.wav"></audio>
+    <audio class="kick-sound" src="./sounds/kick-classic.wav"></audio>
+    <audio class="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
+    <audio class="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
         integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./app.js"></script>
 </body>
+
 </html>

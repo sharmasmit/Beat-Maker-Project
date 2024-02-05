@@ -38,15 +38,15 @@ svg {
     background-color: rgb(59, 197, 231);
 }
 
-.snare-pad.active{
+.snare-pad.active {
     background-color: rgb(218, 58, 178);
 }
 
-.hihat-pad.active{
+.hihat-pad.active {
     background-color: rgb(241, 158, 64);
 }
 
-.sequencer{
+.sequencer {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -70,7 +70,7 @@ svg {
     display: flex;
 }
 
-.controls{
+.controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +78,7 @@ svg {
     margin: 0rem 2rem;
 }
 
-.controls button{
+.controls button {
     padding: 1rem;
     border: none;
     background: rgb(88, 88, 88);
@@ -102,8 +102,44 @@ svg {
     margin-top: 3rem;
 }
 
-select{
+select {
     padding: 1rem;
     font-size: 1rem;
     margin-left: 1rem;
+}
+
+.mute.active {
+    background-color: rgb(146, 146, 146);
+}
+
+.tempo {
+    margin: 3rem;
+    width: 30%;
+}
+
+.tempo-slider {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p {
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
 }
